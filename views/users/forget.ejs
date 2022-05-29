@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../layouts/header.ejs') %>
+    <br>
+    <% 
+    if(typeof message !== 'undefined'){
+        %>
+        <p style="color: green;"><%= message%></p>
+        <%
+    }
+    %> 
+    <br>
+    <h1>Security verification</h1>
+<br>
+<h3>Enter your email id by which we can verify </h3>
+
+<form action="/forget" method="post">
+    
+    <input type="email" name="resetEmail" placeholder="Enter your email id" required>
+    <br><br> 
+    <input type="submit" value="Send Reset link to your email ">
+    <br><br>
+</form>
+<%- include('../layouts/footer.ejs') %>
+</body>
+</html>
+
+ 

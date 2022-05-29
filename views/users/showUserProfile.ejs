@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/img/showUserProfileStyle.css">
+    <title>Document</title>
+</head>
+<body> 
+    
+    <h1 style="text-align:center;">Profile</h1><hr>
+     <h2 style="color: rgb(44, 77, 78);">Welcome, <%= user.name %>   </h2><br> 
+    
+   <form action="/editProfile" method="POST">
+    <div> <h3 style="display:inline-block">Profile photo : &nbsp;&nbsp;</h3>
+      <img width="320px" height="249px" style="display: flex;"  src="/userImages/<%= user.image%>" alt="Not found"></div>
+      
+
+     <div> <h3 style="display:inline-block">Username : &nbsp;&nbsp;</h3> 
+      <h4 style="display:inline-block; font-family: Courier New "><%= user.name%></h4></div>
+       <div> <input type="text" style="display:inline-block; font-family: Courier New " placeholder = <%= user.name %>   name="newName"/> </div>
+    <div> <h3 style="display:inline-block">Email id :&nbsp;&nbsp;</h3><h4 style="display:inline-block; font-family: Courier New "><%= user.email%></h4> </div>
+    <div> <h3 style="display:inline-block">Mobile number :&nbsp;&nbsp;</h3> 
+      <h4 style="display:inline-block; font-family: Courier New "><%= user.mobile%></h4></div>
+       <div> <input type="Number" style="display:inline-block; font-family: Courier New " placeholder=<%= user.mobile%> name="newMobile"/> </div>
+<br>
+    <button type="submit" >Apply changes</button> <hr>
+    <p style="color: red;">*Only name and mobile number can be change.</p>
+  </form>
+
+    <br><br>
+    
+   </form>
+
+       
+</body>
+</html>
